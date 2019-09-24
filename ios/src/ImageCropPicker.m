@@ -863,7 +863,7 @@ RCT_EXPORT_METHOD(openCropper:(NSDictionary *)options
 - (void)dismissCropper:(UIViewController *)controller selectionDone:(BOOL)selectionDone completion:(void (^)(void))completion {
     switch (self.currentSelectionMode) {
         case CROPPING:
-            [controller dismissViewControllerAnimated:YES completion:completion];
+            [controller dismissViewControllerAnimated:FALSE completion:completion];
             break;
         case PICKER:
             if (selectionDone) {
